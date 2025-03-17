@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Coupon App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+Coupon App is a full-stack web application that allows users to claim discount coupons, while admins can manage and track the coupons. The platform ensures fair distribution of coupons using IP-based and cookie-based claim restrictions.
 
-## Available Scripts
+## Live Demo
+🚀 **Deployed Backend**: [Coupon App Backend](https://coupon-app-1v1o.onrender.com)
 
-In the project directory, you can run:
+## Features
+### User Features
+✅ Browse available coupons  
+✅ Claim a coupon (one per user at a time)  
+✅ Responsive and interactive UI  
 
-### `npm start`
+### Admin Features
+✅ Secure login with JWT authentication  
+✅ View and manage coupons  
+✅ Add new coupons  
+✅ Delete or update coupon status  
+✅ View claim history (IP-based tracking)  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
+- **Frontend**: React, Tailwind CSS, React Router, Axios
+- **Backend**: Node.js, Express.js, MongoDB
+- **Authentication**: JWT (JSON Web Token)
+- **Security**: Rate limiting to prevent abuse
+- **Deployment**: Render (Backend), Netlify (Frontend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation & Setup
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js** (v16+ recommended)
+- **MongoDB** (local or cloud database)
+- **npm or yarn**
 
-### `npm test`
+### Backend Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/coupon-app-backend.git
+   cd coupon-app-backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file and add:
+   ```env
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_secret_key
+   ```
+4. Start the backend server:
+   ```bash
+   npm start
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Setup
+1. Clone the frontend repository:
+   ```bash
+   git clone https://github.com/your-repo/coupon-app-frontend.git
+   cd coupon-app-frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend server:
+   ```bash
+   npm start
+   ```
 
-### `npm run build`
+## API Endpoints
+### Public Endpoints
+- **GET** `/api/coupons/available` - Fetch available coupons
+- **PUT** `/api/coupons/claim/:id` - Claim a specific coupon
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Admin Endpoints (Requires Authentication)
+- **POST** `/api/admin/login` - Admin login
+- **GET** `/api/admin/coupons` - View all coupons
+- **POST** `/api/admin/add` - Add a new coupon
+- **DELETE** `/api/admin/coupon/delete/:id` - Delete a coupon
+- **GET** `/api/admin/claim-history` - View claim history
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testing Credentials
+**Admin Login**  
+👤 **Username**: `admin`  
+🔑 **Password**: `admin123`  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
+📷 *[Add Screenshots of the Application Here]*
 
-### `npm run eject`
+## Future Improvements
+- User authentication and accounts
+- Coupon expiration dates
+- More advanced security features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
+MIT License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
