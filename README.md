@@ -4,7 +4,6 @@
 Coupon App is a full-stack web application that allows users to claim discount coupons, while admins can manage and track the coupons. The platform ensures fair distribution of coupons using IP-based and cookie-based claim restrictions.
 
 ## Live Demo
-🚀 **Deployed Backend**: [Coupon App Backend](https://coupon-app-1v1o.onrender.com)
 🚀 **Deployed Frontend**: [Coupon App Frontend](https://coupon-app-frontend-seven.vercel.app/)
 
 ## Features
